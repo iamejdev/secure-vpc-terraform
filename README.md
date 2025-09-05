@@ -52,31 +52,31 @@ The design of this VPC is based on core security best practices:
 * [AWS CLI](https://aws.amazon.com/cli/) installed and configured with appropriate credentials.
 
 ### Deployment Steps
-1.  **Clone the Repository:**
+**1. Clone the Repository:**
 
-    ```bash
-    git clone [https://github.com/iamejdev/secure-vpc-terraform.git](https://github.com/iamejdev/secure-vpc-terraform.git)
-    cd secure-vpc-terraform
-    ```
-2.  **Initialize Terraform:**
+```bash
+git clone [https://github.com/iamejdev/secure-vpc-terraform.git](https://github.com/iamejdev/secure-vpc-terraform.git)
+cd secure-vpc-terraform
+```
+**2. Initialize Terraform:**
     This command downloads the necessary AWS provider plugins.
 
-    ```bash
-    terraform init
-    ```
-3.  **Plan the Deployment:**
+```bash
+terraform init
+```
+**3. Plan the Deployment:**
 
     This command shows you a preview of the resources that will be created.
 
-    ```bash
-    terraform plan
-    ```
-4.  **Apply the Configuration:**
+```bash
+terraform plan
+```
+**4. Apply the Configuration:**
     This command builds and deploys the resources to your AWS account.
 
-    ```bash
-    terraform apply
-    ```
+ ```bash
+terraform apply
+```
 ### Teardown
 
 To prevent ongoing AWS charges, it is important to destroy all infrastructure created by this project when no longer needed. The following command will remove all resources managed by this Terraform configuration.
