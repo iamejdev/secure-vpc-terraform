@@ -75,7 +75,8 @@ The design of this VPC is based on core security best practices:
     ```
 ### Teardown
 
-To avoid incurring AWS charges, destroy all created infrastructure when you are finished.
+To prevent ongoing AWS charges, it is important to destroy all infrastructure created by this project when no longer needed. The following command will remove all resources managed by this Terraform configuration.
+
 ```bash
 terraform destroy
 ```
@@ -84,6 +85,7 @@ terraform destroy
 The following screenshots confirm the successful deployment of the infrastructure as defined in the Terraform code.
 
 ### 1. Terraform CLI Output
+
 The `terraform apply` command completed successfully, showing all resources created and the defined outputs.
 ![Screenshot of Terraform apply output](pics/Git-Bash-Terraform-Apply-1.jpg)
 ![Screenshot of Terraform apply output](pics/Git-Bash-Terraform-Apply-2.jpg)
@@ -94,10 +96,12 @@ The "Main-VPC" and all four subnets (two public, two private) were created corre
 ![Screenshot of VPC and Subnets in AWS Console](pics/VPC-Subnets.jpg)
 
 ### 3. Public & Private Route Tables
+
 The route tables were configured to enforce the secure traffic flow. The public route table targets the Internet Gateway, while the private route table targets the NAT Gateway.
 ![Screenshot of Public and Private Route Tables](pics/Public-Route-Table.jpg)
 ![Screenshot of Public and Private Route Tables](pics/Private-Route-Table.jpg)
 ---
 
 ## Conclusion & Key Learnings
+
 This project provided hands-on experience in translating an architectural design into functional Infrastructure as Code. A key takeaway was the importance of route tables in enforcing network segmentation and security. Building this VPC foundation with Terraform demonstrates a repeatable, scalable, and secure approach to modern cloud infrastructure management.
